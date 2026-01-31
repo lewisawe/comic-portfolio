@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Comic Portfolio
 
-# Run and deploy your AI Studio app
+A comic book-themed portfolio site built with React, TypeScript, and deployed on Google Cloud Run.
 
-This contains everything you need to run your app locally.
+**Live Site:** https://comic-portfolio-610288702971.us-central1.run.app
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ukP_jq6j1zRVXUjqUj3hzMgUfsjK-0m9
+## Local Development
 
-## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+Open http://localhost:5173
 
+## Deploy to Cloud Run
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+gcloud run deploy comic-portfolio \
+  --source . \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --labels dev-tutorial=devnewyear2026
+```
+
+Or use the deploy script:
+
+```bash
+./deploy.sh
+```
+
+## Tech Stack
+
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Docker + Nginx
+- Google Cloud Run
