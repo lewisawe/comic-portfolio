@@ -2,7 +2,7 @@
 node_modules
 .pnp
 .pnp.js
-dev-article.md
+
 # Production builds
 dist
 build
@@ -96,3 +96,10 @@ temp/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Deployment scripts and docs
+deploy.sh
+dev-article.md
+
+# Docker
+.dockerignore
