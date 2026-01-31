@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Lewis Sawe - Cloud & DevOps Engineer | Gaming Portfolio</title>
+    <meta name="title" content="Lewis Sawe - Cloud & DevOps Engineer | Gaming Portfolio" />
+    <meta name="description" content="🚀 Cloud Crusader with 5+ years AWS experience. Struck by lightning while debugging Kubernetes, I gained superpowers to automate anything! Check out my gaming-themed tech portfolio." />
+    <meta name="keywords" content="Lewis Sawe, Cloud Engineer, DevOps, AWS, Kubernetes, Terraform, Docker, Portfolio, Kenya" />
+    <meta name="author" content="Lewis Sawe" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lewisawe.dev/" />
+    <meta property="og:title" content="Lewis Sawe - Cloud & DevOps Engineer | Gaming Portfolio" />
+    <meta property="og:description" content="🚀 Cloud Crusader with 5+ years AWS experience. Struck by lightning while debugging Kubernetes, I gained superpowers to automate anything!" />
+    <meta property="og:image" content="https://lewisawe.dev/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lewisawe.dev/" />
+    <meta property="twitter:title" content="Lewis Sawe - Cloud & DevOps Engineer | Gaming Portfolio" />
+    <meta property="twitter:description" content="🚀 Cloud Crusader with 5+ years AWS experience. Struck by lightning while debugging Kubernetes, I gained superpowers to automate anything!" />
+    <meta property="twitter:image" content="https://lewisawe.dev/og-image.jpg" />
+    <meta property="twitter:creator" content="@lewisawe" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#3a86ff" />
+    <link rel="canonical" href="https://lewisawe.dev/" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              bangers: ['Bangers', 'cursive'],
+            },
+            colors: {
+              'comic-blue': '#3a86ff',
+              'comic-red': '#fb5607',
+              'comic-yellow': '#ffbe0b',
+              'comic-bg': '#f7f7f7',
+              'comic-dark': '#1e1e1e',
+            },
+            backgroundImage: {
+              'halftone': "radial-gradient(circle at 1px 1px, #1e1e1e33 1px, transparent 0)",
+            },
+            backgroundSize: {
+              'halftone': '5px 5px',
+            },
+            boxShadow: {
+              'comic': '8px 8px 0px 0px rgba(30, 30, 30, 1)',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Enhanced scroll-triggered animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.3);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+      }
+      .animated {
+        animation: fadeInUp 0.7s ease-out forwards;
+      }
+
+      /* Button hover effects */
+      .btn-comic {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .btn-comic::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+      }
+
+      .btn-comic:hover::before {
+        left: 100%;
+      }
+
+      /* Card hover effects */
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px) rotateX(5deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Skill bar animations */
+      @keyframes fillBar {
+        from {
+          width: 0%;
+        }
+        to {
+          width: var(--target-width);
+        }
+      }
+
+      .skill-bar {
+        animation: fillBar 1.5s ease-out forwards;
+      }
+
+      /* Pulse animation for icons */
+      @keyframes iconPulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .icon-pulse:hover {
+        animation: iconPulse 0.6s ease-in-out;
+      }
+
+      /* Hero entrance animations */
+      @keyframes hero-title-in {
+        from { opacity: 0; transform: scale(1.2); filter: blur(5px); }
+        to { opacity: 1; transform: scale(1); filter: blur(0); }
+      }
+      @keyframes panel-fly-in {
+        from { opacity: 0; transform: translateX(50px) rotate(-1deg); }
+        to { opacity: 1; transform: translateX(0) rotate(-1deg); }
+      }
+      .hero-title-animate { animation: hero-title-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+      .hero-panel-animate { animation: panel-fly-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards; }
+      
+      /* Living background animations */
+      @keyframes blob-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .blob-pulse { animation: blob-pulse 12s ease-in-out infinite; }
+
+      /* Interactive Halftone */
+      .interactive-halftone {
+        mask-image: radial-gradient(circle 250px at var(--mouse-x, 9999px) var(--mouse-y, 9999px), black 0%, rgba(0,0,0,0.9) 40%, transparent 80%);
+        -webkit-mask-image: radial-gradient(circle 250px at var(--mouse-x, 9999px) var(--mouse-y, 9999px), black 0%, rgba(0,0,0,0.9) 40%, transparent 80%);
+      }
+
+      /* Timeline animation */
+      .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        height: 100%;
+        border-left: 2px solid rgba(30, 30, 30, 0.2);
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 1.5s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      @media (min-width: 768px) {
+        .timeline-container::before {
+          left: 50%;
+          margin-left: -1px;
+        }
+      }
+      .timeline-container.is-drawing::before {
+        transform: scaleY(1);
+      }
+
+      /* Stagger animation utility */
+      .stagger-animation > * {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+      .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+      .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+      .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+      .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+      .stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f7f7f7;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #3a86ff;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #fb5607;
+      }
+
+      /* Loading animation */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-spin {
+        animation: spin 1s linear infinite;
+      }
+
+      /* Text gradient effect */
+      .text-gradient {
+        background: linear-gradient(45deg, #3a86ff, #fb5607, #ffbe0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 3s ease-in-out infinite;
+      }
+
+      @keyframes gradientShift {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
